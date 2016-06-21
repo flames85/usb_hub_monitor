@@ -121,6 +121,7 @@ int main(int argc, char* argv[])
         if(argc > 1)
         {
                 printf("# init mode\n");
+				printf("请将USB存储设备插拔同一个Hub的不同USB口, 然后退出.\nPS: 不得插拔不同的Hub, 如果你这样做了, 请退出后再试. 总之init模式下, 保证只有需要检测的Hub发生变化.\n\n");
                 init_mode = true;
         }
         else
