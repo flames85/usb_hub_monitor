@@ -120,16 +120,17 @@ int main(int argc, char* argv[])
         bool init_mode = false;
         if(argc > 1)
         {
-                printf("init mode\n");
+                printf("# init mode\n");
                 init_mode = true;
         }
         else
         {
-                printf("test mode\n");
+                printf("# test mode\n");
 
                 if( (g_fp = fopen(DEV_HUB_PREFIX_CONF, "rb") ) == NULL )
                 {
                         printf("open conf[%s] fail, please run init mode first!\n", DEV_HUB_PREFIX_CONF);
+						printf("usage.\n\tusb_hub_monitor init\n\n");
                         return -1;
                 }
 
