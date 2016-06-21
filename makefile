@@ -6,7 +6,7 @@ INCLUDES =
 
 LIBS =
 
-CXXFLAGS = -g -O2 -Wall $(LDFLAGS) 
+CXXFLAGS = -g -O2 -Wall $(LDFLAGS) -D_DEBUG_
 
 CXX := g++
 CC  := gcc

@@ -118,6 +118,9 @@ void initMode(const string &strBuf)
 int main(int argc, char* argv[])
 {
         bool init_mode = false;
+#ifdef _DEBUG_
+		printf("# debug mode\n");
+#endif
         if(argc > 1)
         {
                 printf("# init mode\n");
@@ -164,6 +167,9 @@ int main(int argc, char* argv[])
                 // 解析出开头是add, remove, 末尾有block开头的
                 if(0 == strBuf.find("add@") && strBuf.find("block/") != std::string::npos)
                 {
+#ifdef _DEBUG_
+						printf("debug:%s\n", strBuf.c_str());
+#endif
                         strBuf = strBuf.substr(4);
                         if(init_mode)
                         {
@@ -184,6 +190,9 @@ int main(int argc, char* argv[])
                 }
                 else if(0 == strBuf.find("remove@") && strBuf.find("block/") != std::string::npos)
                 {
+#ifdef _DEBUG_
+						printf("debug:%s\n", strBuf.c_str());
+#endif
                         strBuf = strBuf.substr(7);
                         if(init_mode)
                         {
