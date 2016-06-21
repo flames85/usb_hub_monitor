@@ -108,7 +108,7 @@ void initMode(const string &strBuf)
         printf("init dev hub prefix is[%s] so far\n", g_strHubPrefix->c_str());
         if( (g_fp = fopen(DEV_HUB_PREFIX_CONF, "wb") ) == NULL )
         {
-                printf("open conf[%s] fail, please run init mode first!\n", DEV_HUB_PREFIX_CONF);
+                printf("open conf[%s] fail. 可能权限不足!\n", DEV_HUB_PREFIX_CONF);
                 return;
         }
         fwrite(g_strHubPrefix->c_str(), sizeof(char), g_strHubPrefix->size(), g_fp);
